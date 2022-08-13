@@ -1,0 +1,75 @@
+/* GLOBAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Hind', sans-serif;
+} 
+
+/* HEader */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+#portNavbar .nav-link:after {
+    content: '';
+    width: 0;
+    height: 5px;
+    background-color: #35a22c;
+    display: block;
+    transition: all .5s;
+}
+
+#portNavbar .nav-link:hover::after {
+width: 100%;
+}
+
+#portNavbar .active .nav-link:after {
+    width: 100%;
+}
+
+/* Carousel */
+
+.portavatar {
+    border-radius: 50%;
+    width: 140px;
+}
+
+/* Vw: View port width thường dùng cho font-size, thường dùng cho 1 dòng chữ quan trọng KH ko muốn thanh dổi ( slogan ...) */
+
+/* VH = viewport height đơn vị sẽ theo kích thước của trình duyệt. */
+
+#PortcarouselID .carousel-item {
+    height: 100vh;
+}
+
+#PortcarouselID .carousel-item>img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+#PortcarouselID .carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#PortcarouselID .carousel-indicators li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#PortcarouselID .carousel-indicators li.active {
+    background-color: #35a22c;
+}
